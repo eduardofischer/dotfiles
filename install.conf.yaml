@@ -1,0 +1,18 @@
+- defaults:
+    link:
+        relink: true
+
+- clean:
+    ~/:
+        force: true
+    ~/.config:
+        recursive: true
+- link:
+    ~/.zshrc: zshrc
+    ~/.p10k.zsh: p10k.zsh
+    ~/.config/nvim/init.vim: init.vim 
+
+# - create: # Cria diretórios
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
